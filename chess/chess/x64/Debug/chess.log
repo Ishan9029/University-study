@@ -1,0 +1,11 @@
+﻿   Qt/MSBuild: 3.3.1.1
+  Reading Qt configuration (C:/Qt/6.9.0/msvc2022_64/bin/qmake)
+   Qt: 6.9.0
+  uic chess.ui
+  rcc Resource.qrc
+  moc chess.h
+  chess.cpp
+  main.cpp
+  qrc_Resource.cpp
+  moc_chess.cpp
+  chess.vcxproj -> C:\Users\ASUS\Documents\C++ Projects\chess\x64\Debug\chess.exe

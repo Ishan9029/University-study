@@ -1,0 +1,15 @@
+# Node.js apps (React)
+node_modules/
+build/
+dist/
+.env
+
+# VS Code settings (optional)
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

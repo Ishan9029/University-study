@@ -1,0 +1,7 @@
+{
+    "editor.accessibilityPageSize": 18,
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 22,
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "block"
+}
