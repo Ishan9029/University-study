@@ -1,5 +1,5 @@
 import React, { useState, Suspense, lazy } from 'react';
-
+import './App.css';
 // Recursively find all files matching App*.js in the ./apps folder
 const apps = require.context('./apps', true, /App.*\.js$/);
 
@@ -27,7 +27,7 @@ function App() {
         <option value="">-- Select an App --</option>
         {Object.keys(appComponents).map((key) => (
           <option key={key} value={key}>
-            {key.replace('.js', '')}
+            {key.split('/').pop().replace('.js', '')}
           </option>
         ))}
       </select>
