@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
 
 // This is for dynamic imports
 const modules = import.meta.glob('./apps/**/*App*.jsx', { eager: true });
@@ -34,17 +31,6 @@ function App() {
 
   return (
     <div>
-      <div>
-        <BrowserRouter>
-          <h1>React Routing Examples</h1>
-          <Link to="/">Home</Link>
-          <Link to="/About">About</Link>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/About" element={<About />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
       <h2>Select an App</h2>
       <select onChange={(e) => setSelected(e.target.value)} value={selected}>
         {Object.keys(components).map((key) => (
