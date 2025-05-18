@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Home() {
+export default function Login() {
+  const [name, setName] = useState('');
   const navigate = useNavigate();
 
   return (
     <div>
-      <h2>Home Page</h2>
-      <button onClick={() => navigate('/user/John')}>Go to User Page</button>
+      <h2>Login Page</h2>
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Enter your name"
+      />
+      <button
+        disabled={!name.trim()}
+        onClick={() => navigate('/', { state: { name: name.trim() } })}
+      >
+        Login
+      </button>
     </div>
   );
 }
