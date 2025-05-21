@@ -13,7 +13,7 @@ export default function AppRouter() {
         </span>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/About" element={<About />} />
         </Routes>
       </BrowserRouter>

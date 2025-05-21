@@ -1,20 +1,21 @@
-import React, { useRef } from "react";
+import React from 'react';
 
 export default function App4() {
-  const nameRef = useRef(null);
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Submitted name: ${nameRef.current.value}`);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Username</label>
-      <br />
-      <input type="text" ref={nameRef} required />
-      <br />
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <h1>This is Uncontrolled Component</h1>
+      <form onSubmit={handleSubmit}>
+        <br />
+        <input type="text" required maxLength={16} placeholder="Username" />
+        <br />
+        <input type="password" required minLength={8} placeholder="Password" />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 }
