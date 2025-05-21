@@ -7,9 +7,11 @@ export default function AppRouter() {
   return (
     <div>
       <BrowserRouter>
-        <h1>React Routing Examples</h1>
-        <Link to="/">Home</Link>
-        <Link to="/About">About</Link>
+        <h1>React Routing Examples style style</h1>
+        <span>
+          <Link to="/home">Home</Link> | <Link to="/about">About</Link>
+        </span>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />

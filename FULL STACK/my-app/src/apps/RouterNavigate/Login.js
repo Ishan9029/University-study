@@ -15,9 +15,14 @@ export default function Login() {
       />
       <button
         disabled={!name.trim()}
-        onClick={() => navigate('/', { state: { name: name.trim() } })}
+        onClick={() => navigate('/user', { state: { name: name.trim() } })}
+        style={{
+          color: 'Black',
+          backgroundColor: 'skyblue',
+          fontWeight: 'bold',
+        }}
       >
-        Login
+        LOGIN
       </button>
     </div>
   );
