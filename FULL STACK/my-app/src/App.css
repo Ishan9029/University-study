@@ -10,7 +10,7 @@ body {
 
 /* Center container and give padding */
 div {
-  max-width: 600px;
+  max-width: auto;
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
@@ -55,4 +55,10 @@ div > div {
 div > div > div {
   font-style: italic;
   color: #555;
+}
+
+.center-table {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
