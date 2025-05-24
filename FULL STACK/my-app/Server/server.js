@@ -18,7 +18,7 @@ app.get('/items', (req, res) => {
 
 // POST new item
 app.post('/items', (req, res) => {
-  const newItem = { id: Date.now(), name: req.body.name };
+  const newItem = { id: req.body.id, name: req.body.name };
   items.push(newItem);
   res.status(201).json(newItem);
 });
