@@ -11,7 +11,7 @@ emitter.on('fileReadDone', (fileContent) => {
 
     console.log('Student Details:\n');
     students.forEach((student) => {
-      console.log(`ID: ${student.id}`);
+      console.log(`GU ID: ${student.id}`);
       console.log(`Name: ${student.name}`);
       console.log(`Age: ${student.age}`);
       console.log(`Course: ${student.course}`);
