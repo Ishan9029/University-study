@@ -4,41 +4,38 @@ using namespace std;
 class Animal
 {
 public:
-    virtual void makeSound()
+    virtual void sound()
     {
-        cout << "Animal makes a sound" << endl;
+        cout << "Animal sound\n";
     }
 };
 
 class Dog : public Animal
 {
 public:
-    void makeSound() override
+    void sound()
     {
-        cout << "Dog says: Woof!" << endl;
+        cout << "Dog barks\n";
     }
 };
 
 class Cat : public Animal
 {
 public:
-    void makeSound() override
+    void sound()
     {
-        cout << "Cat says: Meow!" << endl;
+        cout << "Cat meows\n";
     }
 };
 
 int main()
 {
-    Animal *animal;
+    Animal *a;
     Dog d;
     Cat c;
 
-    animal = &d;
-    animal->makeSound(); // Outputs: Dog says: Woof!
-
-    animal = &c;
-    animal->makeSound(); // Outputs: Cat says: Meow!
-
-    return 0;
+    a = &d;
+    a->sound();
+    a = &c;
+    a->sound();
 }

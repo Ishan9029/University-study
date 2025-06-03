@@ -1,44 +1,28 @@
 #include <iostream>
 using namespace std;
 
-class Shape
+class Base
 {
 public:
-    virtual void draw()
+    virtual void show()
     {
-        cout << "Drawing a shape" << endl;
+        cout << "Base class\n";
     }
 };
 
-class Circle : public Shape
+class Derived : public Base
 {
 public:
-    void draw() override
+    void show()
     {
-        cout << "Drawing a circle" << endl;
-    }
-};
-
-class Square : public Shape
-{
-public:
-    void draw() override
-    {
-        cout << "Drawing a square" << endl;
+        cout << "Derived class\n";
     }
 };
 
 int main()
 {
-    Shape *shape;
-    Circle c;
-    Square s;
-
-    shape = &c;
-    shape->draw(); // Outputs: Drawing a circle
-
-    shape = &s;
-    shape->draw(); // Outputs: Drawing a square
-
-    return 0;
+    Base *b;
+    Derived d;
+    b = &d;
+    b->show();
 }
