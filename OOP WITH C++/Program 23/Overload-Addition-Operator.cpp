@@ -15,7 +15,7 @@ public:
     {
         return Complex(r + c.r, i + c.i);
     }
-    void show() { cout << r << "+" << i << "i\n"; }
+    void show() { cout << r << "+" << i << " = " << r + i << "\n"; }
 };
 
 int main()
