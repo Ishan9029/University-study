@@ -10,7 +10,7 @@ app.use(express.json()); // to parse JSON body
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
 
-  if (email === 'abc@gmail.com' && password === '12345678') {
+  if (email === 'abc@gmail.com' && password === '123456') {
     res.json({ success: true, message: 'Login successful!' });
   } else {
     res.json({ success: false, message: 'Invalid credentials' });
