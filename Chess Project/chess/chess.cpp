@@ -770,7 +770,7 @@ int chess::minimax(int depth, bool isMaximizingPlayer, int alpha, int beta, int&
         for (const auto& move : moves) {
             QString capturedPiece = boardState[move.second.first][move.second.second];
             applyMove(move, capturedPiece);
-            int eval = minimax(depth - 1, false, alpha, beta, nodesEvaluated);
+            int eval = minimax(depth - 4, false, alpha, beta, nodesEvaluated);
             undoMove(move, capturedPiece);
             maxEval = std::max(maxEval, eval);
             alpha = std::max(alpha, eval);
@@ -783,7 +783,7 @@ int chess::minimax(int depth, bool isMaximizingPlayer, int alpha, int beta, int&
         for (const auto& move : moves) {
             QString capturedPiece = boardState[move.second.first][move.second.second];
             applyMove(move, capturedPiece);
-            int eval = minimax(depth - 1, true, alpha, beta, nodesEvaluated);
+            int eval = minimax(depth - 2, true, alpha, beta, nodesEvaluated);
             undoMove(move, capturedPiece);
             minEval = std::min(minEval, eval);
             beta = std::min(beta, eval);
@@ -817,7 +817,7 @@ void chess::makeAIMove()
     int nodesEvaluated = 0;
 
     for (const auto& move : moves) {
-        if (nodesEvaluated > 1000) break; // Limit nodes
+        if (nodesEvaluated > 9000) break; // Limit nodes
 
         QString capturedPiece = boardState[move.second.first][move.second.second];
         applyMove(move, capturedPiece);
